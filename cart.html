@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина — SoftWareStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">SoftWareStore</h1>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <nav class="main-nav" id="nav-list">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about us.html">О нас</a>
+                <a href="support.html">Поддержка</a>
+                <a href="auth.html" id="nav-auth">Аккаунт</a> 
+                <a href="cart.html" class="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="cart-wrapper">
+            <h2 class="cart-title">Ваша корзина</h2>
+            <div id="full-cart-list"></div>
+            
+            <div class="cart-summary">
+                <div class="total-line">Итого к оплате: <span id="full-cart-total">0</span> ₽</div>
+                <div class="cart-actions">
+                    <button class="action-btn checkout-btn" onclick="openPaymentModal()">Оформить заказ</button>
+                    <button class="clear-btn" onclick="clearCart()">Очистить корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="payment-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h3>Выберите способ оплаты</h3>
+                <div class="payment-options">
+                    <label class="pay-option">
+                        <input type="radio" name="pay-method" id="pay-card" checked onclick="togglePayFields('card')">
+                        <span>Банковская карта</span>
+                    </label>
+                    <label class="pay-option">
+                        <input type="radio" name="pay-method" id="pay-sbp" onclick="togglePayFields('sbp')">
+                        <span>Оплата по СБП</span>
+                    </label>
+                </div>
+
+                <div id="payment-error" class="error-message"></div>
+
+                <div id="card-fields" class="pay-inputs">
+                    <input type="text" id="card-number" placeholder="Номер карты (0000 0000 0000 0000)" maxlength="19">
+                    <div class="row-inputs">
+                        <input type="text" id="card-date" placeholder="ММ/ГГ" maxlength="5">
+                        <input type="password" id="card-cvc" placeholder="CVC" maxlength="3">
+                    </div>
+                </div>
+
+                <div id="sbp-fields" class="pay-inputs" style="display: none;">
+                    <p class="sbp-text">После подтверждения будет сгенерирован QR-код для оплаты в приложении вашего банка.</p>
+                </div>
+
+                <div class="modal-buttons">
+                    <button class="action-btn" onclick="processPayment()">Подтвердить и оплатить</button>
+                    <button class="clear-btn" onclick="closePaymentModal()">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast">Оплата прошла успешно!</div>
+
+    <footer><p>2026 SoftWareStore. Все права защищены.</p></footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

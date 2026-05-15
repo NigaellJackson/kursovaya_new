@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Личный кабинет - SoftWareStore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="logo">SoftWareStore</h1>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <nav class="main-nav" id="nav-list">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about us.html">О нас</a>
+                <a href="support.html">Поддержка</a>
+                <a href="auth.html" id="nav-auth">Аккаунт</a> 
+                <a href="cart.html" class="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="container">
+        <div class="user-profile-card">
+            <div class="user-avatar">
+                <span id="user-initials">Us</span>
+            </div>
+            <div class="user-info">
+                <h2 id="user-email-display">Загрузка...</h2>
+            </div>
+        </div>
+
+        <div class="keys-header">
+            <h2 class="brand-title">МОИ КЛЮЧИ</h2>
+        </div>
+
+        <div id="keys-list" class="keys-grid">
+            <p class="empty-msg">Загрузка данных...</p>
+        </div>
+    </div>
+    
+    <footer><p>2026 SoftWareStore. Все права защищены.</p></footer>
+    <script type="module" src="profile.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

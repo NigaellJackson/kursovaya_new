@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — SoftWareStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <h1 class="logo">SoftWareStore</h1>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="main-nav" id="nav-list">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about us.html">О нас</a>
+                <a href="support.html">Поддержка</a>
+                <a href="auth.html" id="nav-auth">Аккаунт</a> 
+                <a href="cart.html" class="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+            </nav>
+    </div>
+</header>
+
+    <main class="container">
+        <h2 class="brand-title">Microsoft</h2>
+        <div class="product-grid">
+            <div class="product-card" data-title="Windows 11 Pro" data-price="1990">
+                <img src="images/microsoft.png" class="card-logo" alt="Win11">
+                <h3>Windows 11 Pro</h3>
+                <p class="desc">Максимальная производительность и безопасность для бизнеса.</p>
+                <div class="card-bottom">
+                    <span class="price">1990 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="Windows 10 Pro" data-price="1490">
+                <img src="images/microsoft.png" class="card-logo" alt="Win10">
+                <h3>Windows 10 Pro</h3>
+                <p class="desc">Проверенная временем стабильность и поддержка всех программ.</p>
+                <div class="card-bottom">
+                    <span class="price">1490 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="Office 2021 Plus" data-price="3500">
+                <img src="images/office.png" class="card-logo" alt="Office">
+                <h3>Office 2021 Plus</h3>
+                <p class="desc">Полный пакет: Word, Excel, PowerPoint и Outlook навсегда.</p>
+                <div class="card-bottom">
+                    <span class="price">3500 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="Microsoft Visio" data-price="2800">
+                <img src="images/visio.png" class="card-logo" alt="Visio">
+                <h3>Microsoft Visio</h3>
+                <p class="desc">Инструмент для построения сложных схем и диаграмм.</p>
+                <div class="card-bottom">
+                    <span class="price">2800 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="brand-title brand-spacer">JetBrains</h2>
+        <div class="product-grid">
+            <div class="product-card" data-title="PyCharm Pro" data-price="3200">
+                <img src="images/pycharm-icon.png" class="card-logo" alt="PyCharm">
+                <h3>PyCharm Pro</h3>
+                <p class="desc">Интеллектуальная IDE для профессиональной Python-разработки.</p>
+                <div class="card-bottom">
+                    <span class="price">3200 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="IntelliJ IDEA" data-price="4200">
+                <img src="images/icons8-intellij-idea-512.png" class="card-logo" alt="IDEA">
+                <h3>IntelliJ IDEA</h3>
+                <p class="desc">Самая мощная и умная среда разработки для Java.</p>
+                <div class="card-bottom">
+                    <span class="price">4200 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="WebStorm" data-price="2900">
+                <img src="images/icons8-webstorm-512.png" class="card-logo" alt="WebStorm">
+                <h3>WebStorm</h3>
+                <p class="desc">Среда для современной разработки на JS и TS.</p>
+                <div class="card-bottom">
+                    <span class="price">2900 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="CLion" data-price="3800">
+                <img src="images/clion-ide-icon.png" class="card-logo" alt="CLion">
+                <h3>CLion</h3>
+                <p class="desc">Кроссплатформенная IDE для C и C++ с умным редактором.</p>
+                <div class="card-bottom">
+                    <span class="price">3800 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="brand-title brand-spacer">Adobe</h2>
+        <div class="product-grid">
+            <div class="product-card" data-title="Photoshop 2024" data-price="5500">
+                <img src="images/adobe-photoshop-icon.png" class="card-logo" alt="PS">
+                <h3>Photoshop 2024</h3>
+                <p class="desc">Мировой лидер в редактировании фото и графики.</p>
+                <div class="card-bottom">
+                    <span class="price">5500 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="Premiere Pro" data-price="5900">
+                <img src="images/adobe-premiere-pro-icon.png" class="card-logo" alt="Premiere">
+                <h3>Premiere Pro</h3>
+                <p class="desc">Профессиональный видеомонтаж и создание контента.</p>
+                <div class="card-bottom">
+                    <span class="price">5900 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+            <div class="product-card" data-title="After Effects" data-price="5200">
+                <img src="images/adobe-after-effects-icon.png" class="card-logo" alt="AE">
+                <h3>After Effects</h3>
+                <p class="desc">Спецэффекты и профессиональная анимация графики.</p>
+                <div class="card-bottom">
+                    <span class="price">5200 ₽</span>
+                    <button class="action-btn" onclick="addToCart(this)">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast">Товар добавлен!</div>
+
+    <footer><p>2026 SoftWareStore. Все права защищены.</p></footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

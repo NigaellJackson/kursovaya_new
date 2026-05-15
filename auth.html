@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Вход - SoftWareStore</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <h1 class="logo">SoftWareStore</h1>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="main-nav" id="nav-list">
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="about us.html">О нас</a>
+            <a href="support.html">Поддержка</a>
+            <a href="auth.html" id="nav-auth">Аккаунт</a>
+            <a href="cart.html" class="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+        </nav>
+    </div>
+</header>
+
+    <div class="container auth-container">
+        <div class="support-wrapper">
+            <h2 class="brand-title">Вход в Аккаунт</h2>
+            <div class="support-form">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Пароль">
+
+                <a href="#" id="forgot-link" class="forgot-link-wrapper">Забыли пароль?</a>
+
+                <p id="auth-error" class="error-message"></p><button class="action-btn" id="signUpBtn">Регистрация</button>
+                <button class="clear-btn" id="signInBtn">Войти</button>
+
+                <button class="action-btn hidden" id="resetPassBtn" style="display: none;">Сбросить пароль</button>
+                <button class="clear-btn hidden" id="cancelResetBtn" style="display: none;">Отмена</button>
+                
+                <div id="confirm-section" class="hidden">
+                    <input type="text" id="confirm-code-input" placeholder="Код из письма">
+                    <button class="action-btn" id="verifyBtn">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>2026 SoftWareStore. Все права защищены.</p></footer>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поддержка — SoftWareStore</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("2NFmKB2jDyx70OTFq"); 
+   })();
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <div class="header-content">
+        <h1 class="logo">SoftWareStore</h1>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="main-nav" id="nav-list">
+                <a href="index.html">Главная</a>
+                <a href="catalog.html">Каталог</a>
+                <a href="about us.html">О нас</a>
+                <a href="support.html">Поддержка</a>
+                <a href="auth.html" id="nav-auth">Аккаунт</a> 
+                <a href="cart.html" class="cart-btn">Корзина (<span id="cart-count">0</span>)</a>
+            </nav>
+    </div>
+</header>
+
+    <main class="container">
+    <div class="support-wrapper">
+        <h2 class="cart-title">Связаться с нами</h2>
+        <form id="supportForm" class="support-form" onsubmit="submitSupport(event)">
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш Email" required>
+            <textarea rows="5" placeholder="Опишите вопрос" required></textarea>
+            <button type="submit" class="action-btn">Отправить запрос</button>
+        </form>
+    </div>
+
+    <div id="support-inbox" class="support-inbox auth-hidden">
+        <h3 class="brand-title">Ваши обращения</h3>
+        <div id="messages-list"></div>
+    </div>
+</main>
+
+    <div id="toast">Сообщение отправлено!</div>
+
+    <footer><p>2026 SoftWareStore. Все права защищены.</p></footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
